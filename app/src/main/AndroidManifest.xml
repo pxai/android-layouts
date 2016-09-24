@@ -15,7 +15,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LinearLayoutHorizontal"></activity>
+        <activity android:name=".FrameLayoutActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".LinearLayoutHorizontalActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".LinearLayoutVerticalActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".RelativeLayoutActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".GridLayoutActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".TableLayoutActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".CombinationLayoutActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
     </application>
 
 </manifest>

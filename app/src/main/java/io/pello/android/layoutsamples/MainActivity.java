@@ -5,10 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,12 +19,13 @@ public class MainActivity extends AppCompatActivity {
     private ListView layoutListView;
     private ArrayAdapter<String> layoutListAdapter;
     private String[] layoutItems = {
-            "FrameLayout",
-            "LinearLayoutHorizontal",
-            "LinearLayoutVertical",
-            "TableLayout",
-            "GridLayout",
-            "RelativeLayout"};
+            "FrameLayoutActivity",
+            "LinearLayoutHorizontalActivity",
+            "LinearLayoutVerticalActivity",
+            "GridLayoutActivity",
+            "TableLayoutActivity",
+            "RelativeLayoutActivity",
+            "CombinationLayoutActivity"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-
+                Intent intent = null;
                 String layoutName = layoutListAdapter.getItem(position);
 
                 Log.d("PELLODEBUG", "Selected name: " + layoutName);
@@ -69,7 +67,32 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (position) {
                     case 0:
-                        Intent intent = new Intent(MainActivity.this, LinearLayoutHorizontal.class);
+                        intent = new Intent(MainActivity.this, FrameLayoutActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        intent = new Intent(MainActivity.this, LinearLayoutHorizontalActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        intent = new Intent(MainActivity.this, LinearLayoutVerticalActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        intent = new Intent(MainActivity.this, GridLayoutActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        intent = new Intent(MainActivity.this, TableLayoutActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 5:
+                        intent = new Intent(MainActivity.this, RelativeLayoutActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 6:
+                        intent = new Intent(MainActivity.this, CombinationLayoutActivity.class);
+                        startActivity(intent);
                         break;
                     default:
                         break;
