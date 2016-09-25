@@ -5,14 +5,18 @@ import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.webkit.WebView;
 
 public class FrameLayoutActivity extends AppCompatActivity {
+    private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_linear_layout_horizontal);
+        setContentView(R.layout.activity_frame_layout);
         setupActionBar();
+        webView = (WebView) findViewById(R.id.webView);
+        //webView.loadUrl("https://www.google.com");
     }
 
     /**
